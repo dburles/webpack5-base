@@ -1,10 +1,11 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
+import { fileURLToPath } from "url";
 
-module.exports = {
+export default {
   mode: "development",
   entry: {
-    index: "./src/index.js",
+    index: "./src/index.mjs",
   },
   devtool: "inline-source-map",
   devServer: {
@@ -17,7 +18,7 @@ module.exports = {
   ],
   output: {
     filename: "[name].bundle.js",
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(path.dirname(fileURLToPath(import.meta.url)), "dist"),
     clean: true,
   },
   optimization: {
