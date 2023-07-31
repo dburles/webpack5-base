@@ -3,7 +3,6 @@ import HtmlWebpackPlugin from "html-webpack-plugin";
 import { fileURLToPath } from "url";
 
 export default {
-  mode: "development",
   entry: {
     index: "./src/index.mjs",
   },

@@ -7,7 +7,7 @@
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "build": "webpack",
-    "start": "webpack serve --open"
+    "build": "webpack --config webpack.production.config.mjs",
+    "start": "webpack serve --open --config webpack.development.config.mjs"
   }
 }
